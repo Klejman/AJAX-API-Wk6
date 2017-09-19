@@ -142,9 +142,10 @@ function loadText(){
 
 function setImageArray(response){
 	var images = response.data;
-	var movies = $('#movies');
-	for(var i=0; i < images.length; i++){
-		var src= images[i].images.downsized_medium.url;
+	var movies = $('#movies');	
+	$('#movies').empty();
+	for(var i=5; i < images.length; i++){
+		var src= images[i].images.fixed_width.url;
 		var buttonImages = $('<img>');
 		$(buttonImages).attr('src', src);
 		$(movies).append(buttonImages);
@@ -157,10 +158,10 @@ function setImageArray(response){
 $("button").click(function(e) {
     e.preventDefault();
     $.ajax({ 
-        url: "http://api.giphy.com/v1/gifs/search?q=movie+comedy&limit=5&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+comedy&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
         type: "GET",
         data: { 
-            id: $(this).val(), // < note use of 'this' here
+            id: $(this).val(), 
             access_token: $("#access_token").val() 
         },
       })  
@@ -171,9 +172,8 @@ $("button").click(function(e) {
     })
 
     .catch(function(err){
-		console.log(err);
 
-		console.log("Request failed")
+		console.log("Request failed");
 
     })
          
@@ -205,11 +205,3 @@ POST – to add the new data
 DELETE – to delete data
 
 */
-
-/*fetch(url) // Call the fetch function passing the url of the API as a parameter
-.then(function() {
-    // Your code for handling the data you get from the API
-})
-.catch(function() {
-    // This is where you run code if the server returns any errors
-});*/
