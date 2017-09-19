@@ -121,7 +121,13 @@ var returnUrl = function(endpoint, parameters) {
 
 console.log(returnUrl(endpoint,parameters));
 
+/***************************************************
+console logged the endpoint + paramters and set them equal 
+to the url by genre in the ajax url
 
+Has to be a more DRY way of accomplishing this maybe a utility returnURL function?
+
+****************************************************/
 
 
 function loadText(){
@@ -143,7 +149,7 @@ function loadText(){
 function setImageArray(response){
 	var images = response.data;
 	var movies = $('#movies');	
-	$('#movies').empty();
+	// $('#movies').empty(); want to empty the div so image array not repeated or appended when different search initiated
 	for(var i=5; i < images.length; i++){
 		var src= images[i].images.fixed_width.url;
 		var buttonImages = $('<img>');
@@ -155,7 +161,7 @@ function setImageArray(response){
 }
 
 
-$("button").click(function(e) {
+$("#search1").click(function(e) {
     e.preventDefault();
     $.ajax({ 
         url: "http://api.giphy.com/v1/gifs/search?q=movie+comedy&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
@@ -176,9 +182,297 @@ $("button").click(function(e) {
 		console.log("Request failed");
 
     })
+
+
          
 });
 
+$("#search2").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+family&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search3").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+action&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search4").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+documentary&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+
+$("#search5").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+adventure&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search6").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+animation&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search7").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+western&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search8").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+science+fiction&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search9").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+fantasy&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search10").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+mystery&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search11").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+romance&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
+
+$("#search12").click(function(e) {
+    e.preventDefault();
+    $.ajax({ 
+        url: "http://api.giphy.com/v1/gifs/search?q=movie+horror&limit=10&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555",
+        type: "GET",
+        data: { 
+            id: $(this).val(), 
+            access_token: $("#access_token").val() 
+        },
+      })  
+    //promise
+    .then(function(response) {
+    	setImageArray(response);
+
+    })
+
+    .catch(function(err){
+
+		console.log("Request failed");
+
+    })
+
+
+         
+});
 
 
 
