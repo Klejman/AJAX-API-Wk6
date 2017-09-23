@@ -61,7 +61,7 @@ input#submit {
 }
 
 
-.movieButtons button{
+#movie-buttons button{
 	background-color: #000;	
 	width: 23.33%;
 	margin-left: 10px;
@@ -84,7 +84,7 @@ input#submit {
 }
 
 
-.movieButtons button:hover {
+#movie-buttons button:hover {
 	right:23.33%;
 	background-color:#00FF00;
 
