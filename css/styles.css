@@ -14,7 +14,6 @@ html {
 body{
 	max-width: 960px;
 	position: relative;
-	border: 2px solid #fff;
 	width:100%;
 	height:200%;
 	background-color: transparent;
@@ -62,17 +61,6 @@ input#submit {
 }
 
 
-
-/*.movieButtons{
-	margin-bottom: 4px;
-	margin-left: 4.5%;
-	margin-right: auto;
-
-
-}*/
-
-
-
 .movieButtons button{
 	background-color: #000;	
 	width: 23.33%;
@@ -113,13 +101,6 @@ input#movie-input{
 	padding-right: 40px;
 	outline-color: #00FF00;
 }
-/*	animation-rockShimmy: 0.3s linear 1;		
-
-	@keyframes-rockShimmy 
-		33%: transform(rotateZ(10deg);
-		67%: transform(rotateZ(-10deg);
-		100%: transform(rotateZ(10deg);
-}*/
 
 
 h1 {	
@@ -147,4 +128,11 @@ h1 {
 
 .wrapper{
 	padding-bottom: 40px;
+}
+
+img {
+	width:150px;
+	height: 150px;
+	margin: 2px;
+	border: 2px solid goldenrod;
 }
