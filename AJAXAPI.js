@@ -36,13 +36,16 @@ for(var i =0; i< moviebtns.length; i++) {
         })
 
 });
+
 function setImageArray(response){
     var images = response.data;
-    var movies = $('#movies');
+    var movies = $('.movies');
     movies.empty();
     for(var i = 0; i < images.length; i++){
         var id = images[i].id;
-        var src = images[i].images.fixed_width.url;
+        var gifRating = response.data[i].rating;
+        var pTag = $('<p>').text('Rating:'+ ' ' + gifRating);
+        var src = images[i].images.fixed_width_still.url;
         // var srcStill = images[i].images.fixed_width_still.url;
         var buttonImages = $('<img>');
         $.data(buttonImages, "id", id);
@@ -50,10 +53,11 @@ function setImageArray(response){
         movieData[id].still = images[i].images.fixed_width_still.url;
         movieData[id].animated = images[i].images.fixed_width.url;
         buttonImages.attr('src', src);
+        movies.prepend(pTag);
         movies.append(buttonImages);
+
     }
 }
-
 
 $("#submit").on("click", function (event) {
     event.preventDefault();

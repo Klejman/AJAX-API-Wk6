@@ -22,12 +22,21 @@ body{
 	margin-left: auto;
 }
 
+.clear {
+	max-width:65%;
+}
 
-form {
-	width: 35%;
+
+img{
+	margin-top: 10px;
+}
+
+form #movie-form {
+	max-width: 35%;
 	position: absolute;
-	right: 0;
 	margin-left: 2px;
+	margin-right:65%;
+	margin-bottom:5%;
 	display: inline-block;
 	border-radius: 20px;
 	padding: 10px;
@@ -91,13 +100,27 @@ input#submit {
 }	
 
 #movie-form label{
-	margin-bottom: 30%;
+	margin-bottom:2px;
+	font-family: 'Vollkorn', serif;
+	color: #fff;
+	text-shadow:
+			-1px -1px 0 #000,
+			1px -1px #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #00FF00;
 
+}
+form {
+	margin-left:10px;
 }
 
 input#movie-input{
-	margin: 3% 3% 3% 0;
-	width: 100%;
+	width: 30%;
+	margin-top: 4px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: : 10px;
+	margin-bottom:2px;
 	padding-right: 40px;
 	outline-color: #00FF00;
 }
@@ -117,7 +140,7 @@ h1 {
 }
 
 #movies {
-	width: 65%;
+	max-width: 65%;
 	margin-right: 2px;
 	position: relative;
 	padding:5px;
@@ -126,11 +149,31 @@ h1 {
 	clear: both;
 }
 
+.movies	{
+	postition: relative;
+}
+
+p {
+	position: absolute;
+	top:0;
+	z-index: 100;
+}
+
 .wrapper{
+	max-width: 940px;
 	padding-bottom: 40px;
 }
 
+p {
+	text-transform: uppercase;
+	font-family: 'Vollkorn', serif;
+	text-align: center;
+	color: #00FF00;
+	text-transform: 1px solid #000;
+}
+
 img {
+
 	width:150px;
 	height: 150px;
 	margin: 2px;
