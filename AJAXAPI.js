@@ -43,9 +43,9 @@ function setImageArray(response){
     movies.empty();
     for(var i = 0; i < images.length; i++){
         var id = images[i].id;
-        var gifRating = response.data[i].rating;
-        var pTag = $('<p>').text('Rating:'+ ' ' + gifRating);
-        var src = images[i].images.fixed_width_still.url;
+        // var gifRating = response.data[i].rating;
+        // var pTag = $('<p>').text('Rating:'+ ' ' + gifRating);
+        var src = images[i].images.fixed_width.url;
         // var srcStill = images[i].images.fixed_width_still.url;
         var buttonImages = $('<img>');
         $.data(buttonImages, "id", id);
