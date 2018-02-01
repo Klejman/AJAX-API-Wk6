@@ -21,7 +21,7 @@ for(var i =0; i< moviebtns.length; i++) {
 
  $(document).on('click', "button", function () {
     var val = $(this).html(); // HTML values changing
-    var endpoint= "http://api.giphy.com/v1/gifs/search?";
+    var endpoint= "https://api.giphy.com/v1/gifs/search?";
     var parameters= "q=" + val + "&limit=12&rating=PG&api_key=7faa75150cd64d5599def7be32bdf555";
     $.ajax({
         url: endpoint + parameters,
